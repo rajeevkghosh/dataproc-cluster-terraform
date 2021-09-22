@@ -1,0 +1,635 @@
+terraform_version = "1.0.7"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"google_dataproc_cluster.mycluster": {
+			"address":        "google_dataproc_cluster.mycluster",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "mycluster",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_dataproc_cluster",
+			"values": {
+				"cluster_config": [
+					{
+						"autoscaling_config":    [],
+						"encryption_config":     [],
+						"initialization_action": [],
+						"master_config": [
+							{
+								"accelerators": [],
+								"disk_config": [
+									{
+										"boot_disk_size_gb": 30,
+										"boot_disk_type":    "pd-ssd",
+									},
+								],
+								"machine_type":  "e2-medium",
+								"num_instances": 1,
+							},
+						],
+						"preemptible_worker_config": [
+							{
+								"num_instances": 0,
+							},
+						],
+						"security_config": [],
+						"software_config": [
+							{
+								"image_version":       "1.3.7-deb9",
+								"optional_components": null,
+								"override_properties": {
+									"dataproc:dataproc.allow.zero.workers": "true",
+								},
+							},
+						],
+						"staging_bucket": "dataproc-staging-bucket",
+						"worker_config": [
+							{
+								"accelerators": [],
+								"disk_config": [
+									{
+										"boot_disk_size_gb": 30,
+										"boot_disk_type":    "pd-standard",
+										"num_local_ssds":    1,
+									},
+								],
+								"machine_type":     "e2-medium",
+								"min_cpu_platform": "Intel Skylake",
+								"num_instances":    2,
+							},
+						],
+					},
+				],
+				"graceful_decommission_timeout": "120s",
+				"labels": {
+					"env": "dev",
+					"foo": "bar",
+				},
+				"name":     "mycluster",
+				"region":   "us-central1",
+				"timeouts": null,
+			},
+		},
+	},
+}
+
+variables = {
+	"access_token": {
+		"name":  "access_token",
+		"value": "REDACTED_SENSITIVE",
+	},
+}
+
+resource_changes = {
+	"google_dataproc_cluster.mycluster": {
+		"address": "google_dataproc_cluster.mycluster",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"cluster_config": [
+					{
+						"autoscaling_config":    [],
+						"encryption_config":     [],
+						"initialization_action": [],
+						"master_config": [
+							{
+								"accelerators": [],
+								"disk_config": [
+									{
+										"boot_disk_size_gb": 30,
+										"boot_disk_type":    "pd-ssd",
+									},
+								],
+								"machine_type":  "e2-medium",
+								"num_instances": 1,
+							},
+						],
+						"preemptible_worker_config": [
+							{
+								"num_instances": 0,
+							},
+						],
+						"security_config": [],
+						"software_config": [
+							{
+								"image_version":       "1.3.7-deb9",
+								"optional_components": null,
+								"override_properties": {
+									"dataproc:dataproc.allow.zero.workers": "true",
+								},
+							},
+						],
+						"staging_bucket": "dataproc-staging-bucket",
+						"worker_config": [
+							{
+								"accelerators": [],
+								"disk_config": [
+									{
+										"boot_disk_size_gb": 30,
+										"boot_disk_type":    "pd-standard",
+										"num_local_ssds":    1,
+									},
+								],
+								"machine_type":     "e2-medium",
+								"min_cpu_platform": "Intel Skylake",
+								"num_instances":    2,
+							},
+						],
+					},
+				],
+				"graceful_decommission_timeout": "120s",
+				"labels": {
+					"env": "dev",
+					"foo": "bar",
+				},
+				"name":     "mycluster",
+				"region":   "us-central1",
+				"timeouts": null,
+			},
+			"after_unknown": {
+				"cluster_config": [
+					{
+						"autoscaling_config":    [],
+						"bucket":                true,
+						"encryption_config":     [],
+						"gce_cluster_config":    true,
+						"initialization_action": [],
+						"master_config": [
+							{
+								"accelerators": [],
+								"disk_config": [
+									{
+										"num_local_ssds": true,
+									},
+								],
+								"image_uri":        true,
+								"instance_names":   true,
+								"min_cpu_platform": true,
+							},
+						],
+						"preemptible_worker_config": [
+							{
+								"disk_config":    true,
+								"instance_names": true,
+							},
+						],
+						"security_config": [],
+						"software_config": [
+							{
+								"override_properties": {},
+								"properties":          true,
+							},
+						],
+						"temp_bucket": true,
+						"worker_config": [
+							{
+								"accelerators": [],
+								"disk_config": [
+									{},
+								],
+								"image_uri":      true,
+								"instance_names": true,
+							},
+						],
+					},
+				],
+				"id":      true,
+				"labels":  {},
+				"project": true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "mycluster",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_dataproc_cluster",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"google": {
+				"expressions": {
+					"access_token": {
+						"references": [
+							"var.access_token",
+						],
+					},
+				},
+				"name": "google",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "google_dataproc_cluster.mycluster",
+					"expressions": {
+						"cluster_config": [
+							{
+								"master_config": [
+									{
+										"disk_config": [
+											{
+												"boot_disk_size_gb": {
+													"constant_value": 30,
+												},
+												"boot_disk_type": {
+													"constant_value": "pd-ssd",
+												},
+											},
+										],
+										"machine_type": {
+											"constant_value": "e2-medium",
+										},
+										"num_instances": {
+											"constant_value": 1,
+										},
+									},
+								],
+								"preemptible_worker_config": [
+									{
+										"num_instances": {
+											"constant_value": 0,
+										},
+									},
+								],
+								"software_config": [
+									{
+										"image_version": {
+											"constant_value": "1.3.7-deb9",
+										},
+										"override_properties": {
+											"constant_value": {
+												"dataproc:dataproc.allow.zero.workers": "true",
+											},
+										},
+									},
+								],
+								"staging_bucket": {
+									"constant_value": "dataproc-staging-bucket",
+								},
+								"worker_config": [
+									{
+										"disk_config": [
+											{
+												"boot_disk_size_gb": {
+													"constant_value": 30,
+												},
+												"num_local_ssds": {
+													"constant_value": 1,
+												},
+											},
+										],
+										"machine_type": {
+											"constant_value": "e2-medium",
+										},
+										"min_cpu_platform": {
+											"constant_value": "Intel Skylake",
+										},
+										"num_instances": {
+											"constant_value": 2,
+										},
+									},
+								],
+							},
+						],
+						"graceful_decommission_timeout": {
+							"constant_value": "120s",
+						},
+						"labels": {
+							"constant_value": {
+								"env": "dev",
+								"foo": "bar",
+							},
+						},
+						"name": {
+							"constant_value": "mycluster",
+						},
+						"region": {
+							"constant_value": "us-central1",
+						},
+					},
+					"mode":                "managed",
+					"name":                "mycluster",
+					"provider_config_key": "google",
+					"schema_version":      0,
+					"type":                "google_dataproc_cluster",
+				},
+			],
+			"variables": {
+				"access_token": {
+					"description": "access token",
+					"sensitive":   true,
+				},
+			},
+		},
+	},
+	"format_version": "0.2",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":        "google_dataproc_cluster.mycluster",
+					"mode":           "managed",
+					"name":           "mycluster",
+					"provider_name":  "registry.terraform.io/hashicorp/google",
+					"schema_version": 0,
+					"sensitive_values": {
+						"cluster_config": [
+							{
+								"autoscaling_config":    [],
+								"encryption_config":     [],
+								"gce_cluster_config":    [],
+								"initialization_action": [],
+								"master_config": [
+									{
+										"accelerators": [],
+										"disk_config": [
+											{},
+										],
+										"instance_names": [],
+									},
+								],
+								"preemptible_worker_config": [
+									{
+										"disk_config":    [],
+										"instance_names": [],
+									},
+								],
+								"security_config": [],
+								"software_config": [
+									{
+										"override_properties": {},
+										"properties":          {},
+									},
+								],
+								"worker_config": [
+									{
+										"accelerators": [],
+										"disk_config": [
+											{},
+										],
+										"instance_names": [],
+									},
+								],
+							},
+						],
+						"labels": {},
+					},
+					"type": "google_dataproc_cluster",
+					"values": {
+						"cluster_config": [
+							{
+								"autoscaling_config":    [],
+								"encryption_config":     [],
+								"initialization_action": [],
+								"master_config": [
+									{
+										"accelerators": [],
+										"disk_config": [
+											{
+												"boot_disk_size_gb": 30,
+												"boot_disk_type":    "pd-ssd",
+											},
+										],
+										"machine_type":  "e2-medium",
+										"num_instances": 1,
+									},
+								],
+								"preemptible_worker_config": [
+									{
+										"num_instances": 0,
+									},
+								],
+								"security_config": [],
+								"software_config": [
+									{
+										"image_version":       "1.3.7-deb9",
+										"optional_components": null,
+										"override_properties": {
+											"dataproc:dataproc.allow.zero.workers": "true",
+										},
+									},
+								],
+								"staging_bucket": "dataproc-staging-bucket",
+								"worker_config": [
+									{
+										"accelerators": [],
+										"disk_config": [
+											{
+												"boot_disk_size_gb": 30,
+												"boot_disk_type":    "pd-standard",
+												"num_local_ssds":    1,
+											},
+										],
+										"machine_type":     "e2-medium",
+										"min_cpu_platform": "Intel Skylake",
+										"num_instances":    2,
+									},
+								],
+							},
+						],
+						"graceful_decommission_timeout": "120s",
+						"labels": {
+							"env": "dev",
+							"foo": "bar",
+						},
+						"name":     "mycluster",
+						"region":   "us-central1",
+						"timeouts": null,
+					},
+				},
+			],
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "google_dataproc_cluster.mycluster",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"cluster_config": [
+						{
+							"autoscaling_config":    [],
+							"encryption_config":     [],
+							"initialization_action": [],
+							"master_config": [
+								{
+									"accelerators": [],
+									"disk_config": [
+										{
+											"boot_disk_size_gb": 30,
+											"boot_disk_type":    "pd-ssd",
+										},
+									],
+									"machine_type":  "e2-medium",
+									"num_instances": 1,
+								},
+							],
+							"preemptible_worker_config": [
+								{
+									"num_instances": 0,
+								},
+							],
+							"security_config": [],
+							"software_config": [
+								{
+									"image_version":       "1.3.7-deb9",
+									"optional_components": null,
+									"override_properties": {
+										"dataproc:dataproc.allow.zero.workers": "true",
+									},
+								},
+							],
+							"staging_bucket": "dataproc-staging-bucket",
+							"worker_config": [
+								{
+									"accelerators": [],
+									"disk_config": [
+										{
+											"boot_disk_size_gb": 30,
+											"boot_disk_type":    "pd-standard",
+											"num_local_ssds":    1,
+										},
+									],
+									"machine_type":     "e2-medium",
+									"min_cpu_platform": "Intel Skylake",
+									"num_instances":    2,
+								},
+							],
+						},
+					],
+					"graceful_decommission_timeout": "120s",
+					"labels": {
+						"env": "dev",
+						"foo": "bar",
+					},
+					"name":     "mycluster",
+					"region":   "us-central1",
+					"timeouts": null,
+				},
+				"after_sensitive": {
+					"cluster_config": [
+						{
+							"autoscaling_config":    [],
+							"encryption_config":     [],
+							"gce_cluster_config":    [],
+							"initialization_action": [],
+							"master_config": [
+								{
+									"accelerators": [],
+									"disk_config": [
+										{},
+									],
+									"instance_names": [],
+								},
+							],
+							"preemptible_worker_config": [
+								{
+									"disk_config":    [],
+									"instance_names": [],
+								},
+							],
+							"security_config": [],
+							"software_config": [
+								{
+									"override_properties": {},
+									"properties":          {},
+								},
+							],
+							"worker_config": [
+								{
+									"accelerators": [],
+									"disk_config": [
+										{},
+									],
+									"instance_names": [],
+								},
+							],
+						},
+					],
+					"labels": {},
+				},
+				"after_unknown": {
+					"cluster_config": [
+						{
+							"autoscaling_config":    [],
+							"bucket":                true,
+							"encryption_config":     [],
+							"gce_cluster_config":    true,
+							"initialization_action": [],
+							"master_config": [
+								{
+									"accelerators": [],
+									"disk_config": [
+										{
+											"num_local_ssds": true,
+										},
+									],
+									"image_uri":        true,
+									"instance_names":   true,
+									"min_cpu_platform": true,
+								},
+							],
+							"preemptible_worker_config": [
+								{
+									"disk_config":    true,
+									"instance_names": true,
+								},
+							],
+							"security_config": [],
+							"software_config": [
+								{
+									"override_properties": {},
+									"properties":          true,
+								},
+							],
+							"temp_bucket": true,
+							"worker_config": [
+								{
+									"accelerators": [],
+									"disk_config": [
+										{},
+									],
+									"image_uri":      true,
+									"instance_names": true,
+								},
+							],
+						},
+					],
+					"id":      true,
+					"labels":  {},
+					"project": true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "mycluster",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_dataproc_cluster",
+		},
+	],
+	"terraform_version": "1.0.7",
+	"variables": {
+		"access_token": {
+			"value": "REDACTED_SENSITIVE",
+		},
+	},
+}
