@@ -7,7 +7,9 @@ resource "google_dataproc_cluster" "mycluster" {
   name     = "mycluster"
   region   = "us-central1"
   graceful_decommission_timeout = "120s"
+  
   labels = {
+    env = "dev"
     foo = "bar"
   }
 
